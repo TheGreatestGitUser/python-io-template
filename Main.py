@@ -1,16 +1,12 @@
 import sys
 
 all_input = sys.stdin.read().split('\n')
+print = sys.stdout.write # this makes the "print()" function much faster
+			 # and it makes the code more readable.
 
-# The two lines of code below are there just to copy/paste to reduce
-# the amount of time spent typing code.
-#sys.stdin.readline()
-#sys.stdout.write()
-
-
-# Can add .strip() to the first two methods before the .split(), however
-# the code doesn't already come with it in order to save time. Note that
-# .strip() works the exact same as .trim() in Java.
+# Can add .strip() to the first two methods below before the .split(),
+# however the code doesn't already come with it in order to save time.
+# Note that .strip() works the exact same as .trim() in Java.
 
 # Note that the functions below aren't used because all of the standard
 # input is in the "all_input" variable
@@ -34,5 +30,17 @@ for i in range(1, n + 1):
 
 s = "" # this is just a blank string that is used as an example to show how
        # string output works
-sys.stdout.write(s + '\n')
-sys.stdout.write(str(n) + '\n')
+print(s + '\n')
+print(str(n) + '\n')
+
+# Tt is important to note that if you want to make this code faster, you can
+# always use a different compiler, such as PyPy instead of Python. However, note
+# that some compilers may use more (maybe even much more) memory than others.
+
+# If you want to save on memory, then you could use the sys.stdin.readline()
+# function to read each line instead of reading all of them and then storing
+# them in one big string array. Note that this will take a bit longer to run,
+# but you will save a significant amount of memory. Also note that you can say
+# "input = sys.stdin.readline" and then use "input()" to read each line. This
+# re-map of the value of the input() function makes it simpler to use, cleaner
+# to use, and much faster.
